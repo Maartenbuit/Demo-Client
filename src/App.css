@@ -1,22 +1,52 @@
 .App {
   text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('http://s1.picswalls.com/wallpapers/2015/09/27/star-wars-background_102659274_273.jpeg')
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
+  margin: 10px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  opacity: 0.5;
+  background-color: #636569;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  border-radius: 20px;
+  margin: 10px
 }
 
 .App-link {
   color: #09d3ac;
 }
+
+.moviebox {
+  column-count: 4;
+  column-width: 23%;
+  /* display: flex; */
+}
+
+.moviesPictureBox{
+  width: 236px;
+  height: 334px;
+}
+
+.movies {
+  width: 314px;
+  height: 445px;
+  margin-left: 50px;
+}
+  /* flex-direction: row; */ 
+  /* flex-wrap: wrap;
+  margin: auto;} 
+
+/* .movie-row::after {
+  display: flex;
+} */
