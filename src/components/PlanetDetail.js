@@ -2,20 +2,21 @@ import React from 'react'
 
 export default class PlanetDetail extends React.Component {
   render() {
-    if (this.props.planets == []) return "The force is loading planets"
+    if (this.props.planets == undefined) return "The force is loading planets"
     const { planets, planetName } = this.props
-
+    console.log('PROPS', planets)
     const thisPlanet2 = planets.filter(planet => planet.name == planetName)
     const thisPlanet = thisPlanet2[0]
-    if (thisPlanet2 == '') return 'Loading the Force...'
     console.log('planet', thisPlanet)
+   if (thisPlanet === undefined) return 'Loading the Force...'
+    
     return <div className='planet-detail'><h3>{planetName}</h3>
     <div className='planet-list'>
-
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
+    <br></br>
+    <p>Diameter: {thisPlanet.diameter} km</p>
+    <p>Gravity: {thisPlanet.gravity}</p>
+    <p>Terrain: {thisPlanet.terrain}</p>
+    <p>Population: {thisPlanet.population}</p>
 
 
     </div>

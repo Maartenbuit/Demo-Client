@@ -8,6 +8,7 @@ import Intro from './components/Intro';
 import MovieDetailContainer from './components/MovieDetailContainer';
 import CharDetailContainer from './components/CharDetailContainer';
 import PlanetDetailContainer from './components/PlanetDetailContainer'
+import StarshipDetailContainer from './components/SpaceshipDetailContainer'
 
 class App extends React.Component {
   render() {
@@ -17,17 +18,19 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           The ultimate Star Wars page
           <Link to={'/movies'}><button>Index</button></Link>
-      </header>
+        </header>
         <main>
-          <Route exact path='/' component={Intro}/>
+          <Route exact path='/' component={Intro} />
           <Route exact path='/movies' component={MovieListContainer} />
           <Route exact path='/movies/:id' component={MovieDetailContainer} />
-          <Route exact path='/characters/:charName' component={CharDetailContainer}/>
-          <Route exact path='/planets/:planetName' component={PlanetDetailContainer}/>
-           
-      </main>
-    </div>
-        );
-      }
-      }
-      export default App;
+          <Route exact path='/characters/:charName' component={CharDetailContainer} />
+          <Route exact path='/planets/:planetName' component={PlanetDetailContainer} />
+          <Route exact path='/starships/:spaceshipName' component={StarshipDetailContainer} />
+
+
+        </main>
+      </div>
+    );
+  }
+}
+export default App;

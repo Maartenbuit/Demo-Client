@@ -14,7 +14,7 @@ class PlanetDetailContainer extends React.Component {
     // console.log('PROPS',this.props.match.params.planetName)
     const planetName = this.props.match.params.planetName
 
-    // console.log('SP', this.props.spaceships)
+    console.log('SP', this.props.planets)
     return <PlanetDetail
       planets={this.props.planets}
       planetName={planetName}
@@ -24,7 +24,7 @@ class PlanetDetailContainer extends React.Component {
 
 function mapStateToProps(state) {
 return {
-  planets: state.details,
+  planets: state.planets,
   }
 }
 

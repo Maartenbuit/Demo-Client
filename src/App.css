@@ -43,6 +43,18 @@
   height: 445px;
   margin-left: 50px;
 }
+
+.display{
+  display: flex;
+  column-count: 3;
+  column-width: 30%;
+  justify-content: space-around;
+  
+}
+.display.h2{
+  background-color:#636569;
+  opacity: 0.6;
+}
   /* flex-direction: row; */ 
   /* flex-wrap: wrap;
   margin: auto;} 

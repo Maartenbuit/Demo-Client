@@ -10,12 +10,13 @@ export default class CharDetail extends React.Component {
     console.log('thisChar', thisChar)
     return <div className ='char-detail'><h3>{charName}</h3>
     <div className='char-list'>
-    
-      <p>Date of Birth:{thisChar.birth_year}</p>
-      <p>Eye Color :{thisChar.eye_color}</p>
-      <p>Haircolor:{thisChar.hair_color}</p>
-      <p>Height:{thisChar.height} CM</p>
-      <p>Weight:{thisChar.mass} KG</p>
+      <br></br>
+      <p>Date of Birth: {thisChar.birth_year}</p>
+      <p>Eye Color: {thisChar.eye_color}</p>
+      <p>Haircolor: {thisChar.hair_color}</p>
+      <p>Height: {thisChar.height} CM</p>
+      <p>Weight: {thisChar.mass} KG</p>
+      
     
     </div>
     </div>

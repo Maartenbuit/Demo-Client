@@ -7,13 +7,17 @@ export default class MovieDetail extends React.Component {
     if (this.props.movies === undefined) return "The force is loading movies"
     if (this.props.planets === undefined) return "The force is loading planets"
     if (this.props.spaceships === undefined) return "The force is loading starships"
+    if (this.props.moviesCrawl === undefined) return "The force is loading movies"
     //console.log("movies1", this.props.movies)
-    const { chars, movies, planets, spaceships } = this.props
-    //console.log('spaceS') 
+    const { chars, movies, moviesCrawl, planets, spaceships } = this.props
+    // console.log('CRAWL', moviesCrawl) 
     // const movies = this.props.movies
     const movieId = this.props.movieId
     const thisMovieUrl = `https://swapi.co/api/films/${movieId}/`
     const thisMovie = movies.filter(movie => movie.url == thisMovieUrl)
+    const thisMovieCrawl2 = moviesCrawl.filter(a => a.id == movieId)
+    const thisMovieCrawl = thisMovieCrawl2[0]
+    // console.log('TEST', thisMovieCrawl)
     const movieChars = thisMovie[0].characters
     const moviePlanets = thisMovie[0].planets
     const movieSpaceships = thisMovie[0].starships
@@ -24,21 +28,26 @@ export default class MovieDetail extends React.Component {
     //const thisMovieId = thisMovie[0].episode_id
 
     //console.log('THIS Chars', theseChars)
-    return <div className='movie-details'>
+    return <div className='movie-details'><h1>{thisMovieCrawl.name}</h1>
+      <div className='movie-crawl'>
+        <iframe src={thisMovieCrawl.crawlUrl} width="560" height="315"></iframe>
+      </div>
+      <div className='display'>
       <div className='movie-chars'>
-        <h3>Characters:</h3>
+        <h2>Characters:</h2>
         {theseChars.map(char =>
           <span key={char.url}><p><Link to={`/characters/${char.name}`}>{char.name}</Link></p></span>)}
       </div>
       <div className='movie-planets'>
-        <h3>Planets:</h3>
+        <h2>Planets:</h2>
         {thesePlanets.map(planet =>
           <span key={planet.url}><p><Link to={`/planets/${planet.name}`}>{planet.name}</Link></p></span>)}
       </div>
       <div className='movie-spaceships'>
-      <h3>Starships:</h3>
+      <h2>Starships:</h2>
       {theseSpaceships.map(sp =>
         <span key={sp.url}><p><Link to={`/starships/${sp.name}`}>{sp.name}</Link></p></span>)}
+        </div>
     </div>
     </div >
   }
