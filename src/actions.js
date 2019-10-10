@@ -58,7 +58,7 @@ export function allChars(chars) {
     payload: chars
   }
 }
-
+// export async function asyncGetChars(){
 export const getChars = (page=1) => (dispatch, getState) => {
   // dispatch(emptyStore())
   request(`https://swapi.co/api/people/?page=${page}`)
@@ -74,7 +74,7 @@ export const getChars = (page=1) => (dispatch, getState) => {
       })
       .catch(console.error)
   } 
-
+// } 
 
 export const ALL_PLANETS = 'ALL_PLANETS'
 

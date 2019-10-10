@@ -1,4 +1,5 @@
 import React from 'react'
+// import './spaceshipDetail.css'
 import { connect } from 'react-redux'
 import SpaceshipDetail from './SpaceshipDetail'
 import { getSpaceships } from '../actions'

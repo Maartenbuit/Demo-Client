@@ -10,7 +10,7 @@ export default class PlanetDetail extends React.Component {
     console.log('planet', thisPlanet)
    if (thisPlanet === undefined) return 'Loading the Force...'
     
-    return <div className='planet-detail'><h3>{planetName}</h3>
+    return <div className='planet-detail'><h3>Planet: {planetName}</h3>
     <div className='planet-list'>
     <br></br>
     <p>Diameter: {thisPlanet.diameter} km</p>

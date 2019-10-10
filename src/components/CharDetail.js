@@ -8,7 +8,7 @@ export default class CharDetail extends React.Component {
     const thisChar = thisChar2[0]
     if (thisChar == undefined) return 'Loading the Force...'
     console.log('thisChar', thisChar)
-    return <div className ='char-detail'><h3>{charName}</h3>
+    return <div className ='char-detail'><h3>Character: {charName}</h3>
     <div className='char-list'>
       <br></br>
       <p>Date of Birth: {thisChar.birth_year}</p>

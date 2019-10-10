@@ -8,7 +8,7 @@ export default class SpaceshipDetail extends React.Component {
     const thisSp = thisSp2[0]
     if (thisSp == undefined) return 'Loading the Force...'
     console.log('thisChar', thisSp)
-    return <div className ='sp-detail'><h3>{spaceshipName}</h3>
+    return <div className ='sp-detail'><h3>Starship: {spaceshipName}</h3>
     <div className='sp-list'>
       <br></br>
       <p>Model: {thisSp.model}</p>
