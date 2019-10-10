@@ -1,0 +1,8 @@
+html, body {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('http://s1.picswalls.com/wallpapers/2015/09/27/star-wars-background_102659274_273.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,7 +1,17 @@
-.App {
+html, body {
   text-align: center;
   font-family: 'Press Start 2P', cursive;
-  background-image: url('http://s1.picswalls.com/wallpapers/2015/09/27/star-wars-background_102659274_273.jpeg')
+  background-image: url('http://s1.picswalls.com/wallpapers/2015/09/27/star-wars-background_102659274_273.jpeg') /*no-repeat center center fixed*/;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
+  height:100%;
+  margin: auto;
 }
 
 .App-logo {
@@ -10,8 +20,7 @@
 }
 
 .App-header {
-  opacity: 0.5;
-  background-color: #636569;
+  background-color: rgba(99,101,105, 0.3);
   min-height: 25vh;
   display: flex;
   flex-direction: column;
@@ -42,6 +51,22 @@
   width: 314px;
   height: 445px;
   margin-left: 50px;
+}
+
+.display{
+  display: flex;
+  column-count: 3;
+  column-width: 30%;
+  justify-content: space-around;
+  
+}
+.movie-chars, .movie-planets, .movie-spaceships {
+  background-color: rgba(99,101,105, 0.3);
+  border-radius: 20px;
+  
+}
+h2 {
+  text-decoration: underline
 }
   /* flex-direction: row; */ 
   /* flex-wrap: wrap;
