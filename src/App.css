@@ -61,7 +61,7 @@ html, body {
   
 }
 .movie-chars, .movie-planets, .movie-spaceships {
-  background-color: rgba(99,101,105, 0.3);
+  background-color: rgba(99,101,105, 0.5);
   border-radius: 20px;
   
 }

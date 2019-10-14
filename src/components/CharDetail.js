@@ -2,10 +2,13 @@ import React from 'react'
 
 export default class CharDetail extends React.Component {
   render() {
+    // eslint-disable-next-line 
     if (this.props.chars == []) return "The force is loading characters"
     const { chars, charName } = this.props
+    // eslint-disable-next-line 
     const thisChar2 = chars.filter(char => char.name == charName)
     const thisChar = thisChar2[0]
+    // eslint-disable-next-line 
     if (thisChar == undefined) return 'Loading the Force...'
     console.log('thisChar', thisChar)
     return <div className ='char-detail'><h3>Character: {charName}</h3>

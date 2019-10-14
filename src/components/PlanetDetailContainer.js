@@ -13,8 +13,8 @@ class PlanetDetailContainer extends React.Component {
   render() {
     // console.log('PROPS',this.props.match.params.planetName)
     const planetName = this.props.match.params.planetName
-
-    console.log('SP', this.props.planets)
+    
+    //console.log('SP', this.props.planets)
     return <PlanetDetail
       planets={this.props.planets}
       planetName={planetName}

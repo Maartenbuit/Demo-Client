@@ -2,8 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { getMovies } from '../actions'
 import MovieList from './MovieList'
-// import { normalize, schema } from 'normalizr';
-
 
 class MovieListContainer extends React.Component {
   componentDidMount(){
@@ -11,8 +9,6 @@ class MovieListContainer extends React.Component {
   }
 
   render(){
-
-    // console.log('NORM', this.props.movies)
     return <MovieList 
     movies={this.props.movies}
     />

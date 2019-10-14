@@ -14,7 +14,9 @@ export default class MovieDetail extends React.Component {
     // const movies = this.props.movies
     const movieId = this.props.movieId
     const thisMovieUrl = `https://swapi.co/api/films/${movieId}/`
+    // eslint-disable-next-line
     const thisMovie = movies.filter(movie => movie.url == thisMovieUrl)
+    // eslint-disable-next-line
     const thisMovieCrawl2 = moviesCrawl.filter(a => a.id == movieId)
     const thisMovieCrawl = thisMovieCrawl2[0]
     // console.log('TEST', thisMovieCrawl)
@@ -30,7 +32,7 @@ export default class MovieDetail extends React.Component {
     //console.log('THIS Chars', theseChars)
     return <div className='movie-details'><h1>{thisMovieCrawl.name}</h1>
       <div className='movie-crawl'>
-        <iframe src={thisMovieCrawl.crawlUrl} width="560" height="315"></iframe>
+        <iframe title={thisMovieCrawl.crawlUrl} src={thisMovieCrawl.crawlUrl} width="560" height="315"></iframe>
       </div>
       <div className='display'>
       <div className='movie-chars'>
