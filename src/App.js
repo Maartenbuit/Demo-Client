@@ -9,6 +9,7 @@ import MovieDetailContainer from './components/MovieDetailContainer';
 import CharDetailContainer from './components/CharDetailContainer';
 import PlanetDetailContainer from './components/PlanetDetailContainer'
 import StarshipDetailContainer from './components/SpaceshipDetailContainer'
+// import LikeButtonContainer from './components/LikeButtonContainer'
 
 class App extends React.Component {
   render() {
@@ -26,6 +27,7 @@ class App extends React.Component {
           <Route exact path='/characters/:charName' component={CharDetailContainer} />
           <Route exact path='/planets/:planetName' component={PlanetDetailContainer} />
           <Route exact path='/starships/:spaceshipName' component={StarshipDetailContainer} />
+          {/* <Route exact path='/test' component={LikeButtonContainer} /> */}
 
 
         </main>

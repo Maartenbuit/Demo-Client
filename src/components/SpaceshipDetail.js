@@ -2,10 +2,13 @@ import React from 'react'
 
 export default class SpaceshipDetail extends React.Component {
   render() {
+    // eslint-disable-next-line 
     if (this.props.ships == []) return "The force is loading characters"
     const { ships, spaceshipName } = this.props
+    // eslint-disable-next-line 
     const thisSp2 = ships.filter(ships => ships.name == spaceshipName)
     const thisSp = thisSp2[0]
+    // eslint-disable-next-line 
     if (thisSp == undefined) return 'Loading the Force...'
     console.log('thisChar', thisSp)
     return <div className ='sp-detail'><h3>Starship: {spaceshipName}</h3>

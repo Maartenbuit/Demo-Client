@@ -1,21 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
-// import { normalize, schema } from 'normalizr';
-
 
 export default class EventList extends React.Component {
   render() {
-    // if (this.props.movies == 0) return "The Force is Loading..."
-    // const name = new schema.Entity('names') 
-    // const url = new schema.Entity('crawlUrl', {
-    //   urler: name
-    // })
-    // const article = new schema.Entity('articles',{
-    //   author: name,
-    //   urls: [url]
-    // })
-    // const normalizedData = normalize(this.props.movies, article)
-    // console.log('NL', normalizedData)
 
     // function likeButton() {
     //   // Declare a new state variable, which we'll call "count"
